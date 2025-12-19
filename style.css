@@ -1,0 +1,137 @@
+*{
+    margin: 0;
+}
+
+body{
+    background-color: black;
+    height: 100%;
+    width: 100%;
+    margin: 10px;
+    display: flex;
+}
+
+#starsystem{
+    margin: auto;
+    width: 450px;
+    height: 450px;
+}
+
+#starA{
+    top: 100px;
+    left: 850px;
+}
+
+#starB{
+    top: 120px;
+    left: 550px;
+}
+
+#starC{
+    top: 150px;
+    left: 800px;
+}
+
+#starD{
+    top: 300px;
+    left: 440px;
+}
+
+.stars{
+    position: absolute;
+    border-radius: 50%;
+    height: 10px;
+    width: 10px;
+    background: -webkit-radial-gradient(white, lightblue, blue);
+    background: -o-radial-gradient(white, lightblue, blue);
+    background: -moz-radial-gradient(white, lightblue, blue);
+    background: radial-gradient(white, lightblue, blue);
+    -webkit-animation: twinkle 3s infiniteeaseinout alternate;
+    animation: twinkle 3s infinite ease-in-out alternate;
+}
+
+@-webkit-keyframes twinkle{
+    0%{box-shadow: 0  0 50px white;}
+    50%{box-shadow: 0 0 100px white;}
+    100%{box-shadow: 0 0 180px white;}
+}
+
+.planet{
+    border-radius: 50%;
+    height: 5%;
+    width: 5%;
+    position: relative;
+    left: 30%;
+}
+
+#redplanet{
+    background-color: red;
+}
+
+#orangeplanet{
+    background-color: orange;
+}
+
+#greenplanet{
+    background-color: green;
+}
+
+#blueplanet{
+    background-color: blue;
+}
+
+#whiteplanet{
+    background-color: white;
+}
+
+.orbit{
+    height: 80%;
+    width: 80%;
+    margin: 5% 10% 10% 10%;
+    border-radius: 50%;
+    border: .5px dotted green;
+    -webkit-animation: spin-left 20s linear infinite;
+    animation: spin-left 20s linear infinite;
+}
+
+#sun{
+    position: relative;
+    margin: 20% auto;
+    border-radius: inherit;
+    height: 50%;
+    width: 50%;
+    background-color: yellow;
+    -webkit-animation: shine 4s infinite ease-in-out alternate;
+    animation: shine 4s infinite ease-in-out alternate;
+}
+
+@-webkit-keyframes spin-left{
+    100%{
+        -webkit-transform: rotate(-360deg);
+        -moz-transform: rotate(-360deg);
+        -ms-transform: rotate(-360deg);
+        -o-transform: rotate(-36-deg);
+        transform: rotate(-360deg);
+    }
+}
+
+@keyframes spin-left{
+    100%{
+        -webkit-transform: rotate(-360deg);
+        -moz-transform: rotate(-360deg);
+        -ms-transform: rotate(-360deg);
+        -o-transform: rotate(-360deg);
+        transform: rotate(-360deg);
+    }
+}
+
+@-webkit-keyframes shine{
+    0%{box-shadow: 0 0 30px yellow;}
+    50%{box-shadow: 0 0 80px yellow;}
+    100%{box-shadow: 0 0 150px yellow;}
+}
+
+@keyframes shine{
+    0%{box-shadow: 0 0 30px yellow;}
+    50%{box-shadow: 0 0 80px yellow;}
+    100%{box-shadow: 0 0 150px yellow;}
+}
